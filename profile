@@ -40,6 +40,25 @@ alias dversion="docker version"
 alias dwait="docker wait"
 alias drun="docker run"
 
+# Convert docker-machine commands to aliases directly
+alias dmactive="docker-machine active"
+alias dmcreate="docker-machine create"
+alias dmconfig="docker-machine config"
+alias dminspect="docker-machine inspect"
+alias dmip="docker-machine ip"
+alias dmkill="docker-machine kill"
+alias dmls="docker-machine ls"
+alias dmregenerate-certs="docker-machine regenerate-certs"
+alias dmrestart="docker-machine restart"
+alias dmrm="docker-machine rm"
+alias dmenv="docker-machine env"
+alias dmssh="docker-machine ssh"
+alias dmstart="docker-machine start"
+alias dmstop="docker-machine stop"
+alias dmupgrade="docker-machine upgrade"
+alias dmurl="docker-machine url"
+alias dmhelp="docker-machine help"
+
 # customized aliases
 # list all docker processes included stop containers.
 alias dpa="docker ps -a"
