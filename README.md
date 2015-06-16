@@ -1,8 +1,11 @@
 # alias-for-docker
-Build the useful aliases for docker commands
+Build the useful aliases from docker commands
 
-# Usage
-. profile
+# Usage for Bash
+$ curl -fsSL https://raw.githubusercontent.com/SydOps/alias-for-docker/master/profile >> ~/.bashrc && source ~/.bashrc
 
-# attach to exist .profile
-cat profile >> ~/.profile
+# Usage for ksh
+$ curl -fsSL https://raw.githubusercontent.com/SydOps/alias-for-docker/master/profile >> ~/.profile && source ~/.profile
+
+# Usage for zsh
+$ curl -fsSL https://raw.githubusercontent.com/SydOps/alias-for-docker/master/profile >> ~/.zshrc && source ~/.zshrc

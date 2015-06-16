@@ -1,3 +1,4 @@
+# Convert docker commands to aliasies directly
 alias dattach="docker attach"
 alias dbuild="docker build"
 alias dcommit="docker commit"
@@ -38,3 +39,12 @@ alias dunpause="docker unpause"
 alias dversion="docker version"
 alias dwait="docker wait"
 alias drun="docker run"
+
+# customized aliases
+# list all docker processes included stop containers.
+alias dpa="docker ps -a"
+# list all untagged images (dangling)
+alias dangline="docker images -f "dangling=true" -q"
+# get dockerfile from image 
+# Usages: dfimage <image> [-f], example: dfimage nginx
+alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock centurylink/dockerfile-from-image"
