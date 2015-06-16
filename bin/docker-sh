@@ -1,3 +1,5 @@
 #/bin/bash
+# Usage: docker sh <image>
+# Example: docker sh ubuntu
 
 docker run -i -t --entrypoint=bash $1 --
