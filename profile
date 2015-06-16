@@ -50,3 +50,5 @@ alias dangline="docker images -f "dangling=true" -q"
 alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock centurylink/dockerfile-from-image"
 # list images and merge with tags
 alias dit="docker images |awk 'NR==1{l=length(\$0)}{printf \"%-20s %-20s %-20s\t%s:%s\n\",substr(\$0,l-51,20),substr(\$0,l-31,20),substr(\$0,l-11),\$1,\$2}'"
+# list the last container id
+alias dl='docker ps -l -q'
