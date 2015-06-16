@@ -74,3 +74,14 @@ alias dit="docker images |awk 'NR==1{l=length(\$0)}{printf \"%-20s %-20s %-20s\t
 alias djq='docker exec ryfow/jq'
 # list the last container id
 alias dl='docker ps -l -q'
+
+# http://lucapette.me/a-couple-of-useful-aliases-for-docker/
+docker() {
+  if command -v "docker-$1" > /dev/null 2>&1; then
+    subcommand=$1
+    shift
+    docker-$subcommand $@
+  else
+    /usr/local/bin/docker $@
+  fi
+}
