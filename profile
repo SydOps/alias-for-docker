@@ -1,4 +1,4 @@
-# Convert docker commands to aliasies directly
+# Convert docker commands to aliases directly
 alias dattach="docker attach"
 alias dbuild="docker build"
 alias dcommit="docker commit"
