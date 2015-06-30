@@ -66,12 +66,12 @@ alias dpa="docker ps -a"
 alias dangline="docker images -f "dangling=true" -q"
 # get dockerfile from image 
 # Usages: dfimage <image> [-f], example: dfimage nginx
-alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock centurylink/dockerfile-from-image"
+alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm centurylink/dockerfile-from-image"
 # list images and merge with tags
 alias dit="docker images |awk 'NR==1{l=length(\$0)}{printf \"%-20s %-20s %-20s\t%s:%s\n\",substr(\$0,l-51,20),substr(\$0,l-31,20),substr(\$0,l-11),\$1,\$2}'"
 # run jq via container. So you can run all commands in http://stedolan.github.io/jq/tutorial/ as normal, just replace jq with djq
 # example: curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' |djq '.[0] | {message: .commit.message, name: .commit.committer.name}'
-alias djq='docker exec ryfow/jq'
+alias djq='docker run --rm ryfow/jq'
 # list the last container id
 alias dl='docker ps -l -q'
 
